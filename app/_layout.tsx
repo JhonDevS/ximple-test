@@ -9,6 +9,8 @@ import {
   ThemeProvider,
 } from "@react-navigation/native";
 import { Stack } from "expo-router";
+import { Provider } from "react-redux";
+import store from "@/store/store";
 
 export { ErrorBoundary } from "expo-router";
 
@@ -46,17 +48,18 @@ function RootLayoutNav() {
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(screens)/index" options={{ headerShown: false }} />
-        <Stack.Screen
-          name="(screens)/accept-credit"
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="(modals)/select-credit"
-          options={{ presentation: "modal" }}
-        />
-      </Stack>
+      <Provider store={store}>
+        <Stack>
+          <Stack.Screen
+            name="(screens)/index"
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="(screens)/accept-credit"
+            options={{ headerShown: false }}
+          />
+        </Stack>
+      </Provider>
     </ThemeProvider>
   );
 }

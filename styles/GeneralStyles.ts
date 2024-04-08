@@ -40,7 +40,7 @@ export const generalStyles = StyleSheet.create({
     borderColor: "#d9d9d9",
     borderWidth: 1,
     paddingHorizontal: 10,
-    borderRadius: 5
+    borderRadius: 5,
   },
   button: {
     marginTop: 35,
@@ -60,6 +60,7 @@ export const generalStyles = StyleSheet.create({
     backgroundColor: "#d1d8fa",
     fontSize: 12,
     fontWeight: "normal",
+    borderRadius: 5,
   },
   buttonLabel: {
     fontSize: 18,
@@ -68,5 +69,61 @@ export const generalStyles = StyleSheet.create({
     marginHorizontal: "auto",
     fontWeight: "normal",
     color: "#ffffff",
+  },
+  modalBackground: {
+    width: "100%",
+    height: "100%",
+    alignSelf: "center",
+    backgroundColor: "rgba(77, 77, 77, 0.8)",
+  },
+  modalContent: {
+    position: "relative",
+    alignSelf: "center",
+    marginTop: 150,
+    width: "80%",
+    height: "50%",
+    borderRadius: 18,
+    padding: 16,
+  },
+  creditSelectedLabel: {
+    fontSize: 12,
+    fontWeight: "normal",
+    color: "#808080",
+    marginTop: 70,
+    marginBottom: 5
+  },
+  creditOptionDisabled: {
+    backgroundColor: "#d1d8fa",
+    marginBottom: 10,
+    borderRadius: 5,
+    padding: 8,
+    height: 40,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    width: "100%",
+  },
+  creditOption: {
+    backgroundColor: "#2248E9",
+    marginBottom: 10,
+    borderRadius: 5,
+    padding: 8,
+    height: 40,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    width: "100%",
+  },
+  creditOptionName: {
+    maxWidth: "50%",
+    color: "#ffffff",
+    fontSize: 18,
+    fontWeight: "normal",
+  },
+  creditOptionPrice: {
+    maxWidth: "50%",
+    color: "#ffffff",
+    fontSize: 18,
+    fontWeight: "normal",
   },
 });

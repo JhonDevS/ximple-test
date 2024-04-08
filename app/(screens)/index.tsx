@@ -1,9 +1,11 @@
+import AvailableCreditsComponent from "@/components/modals/available-credits";
 import { UserInfo } from "@/interfaces/UserInfo";
 import { generalStyles } from "@/styles/GeneralStyles";
 import { Button } from "@/theme/components/Button";
 import { Input } from "@/theme/components/Input";
 import { Text } from "@/theme/components/Text";
 import { View } from "@/theme/components/View";
+import { useState } from "react";
 import { Controller, FieldValues, useForm } from "react-hook-form";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -19,8 +21,10 @@ export default function SearchCreditScreen() {
     },
   });
 
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
   const onSubmit = (data: FieldValues) => {
-    console.log(data);
+    setIsModalVisible(() => !isModalVisible);
   };
 
   return (
@@ -78,6 +82,7 @@ export default function SearchCreditScreen() {
             <Text style={generalStyles.buttonLabel}>Descubrir créditos</Text>
           </Button>
         </View>
+        <AvailableCreditsComponent isVisible={isModalVisible} />
       </SafeAreaView>
     </View>
   );
