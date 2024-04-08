@@ -1,15 +1,17 @@
-import { generalStyles } from "@/styles/general-styles";
+import { generalStyles } from "@/styles/GeneralStyles";
 import { ButtonProps } from "@/types/ThemeProps";
-import { Button as NativeButton, View } from "react-native";
+import { Pressable } from "react-native";
 
 export function Button(props: ButtonProps) {
   return (
-    <View style={generalStyles.container}>
-      <NativeButton
-        onPress={props.onPress}
-        title={props.title}
-        accessibilityLabel={props.accessibilityLabel}
-      />
-    </View>
+    <Pressable
+      style={
+        props.disabled ? generalStyles.buttonDisabled : generalStyles.button
+      }
+      onPress={props.onPress}
+      disabled={props.disabled}
+    >
+      {props.children}
+    </Pressable>
   );
 }

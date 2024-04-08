@@ -1,15 +1,14 @@
-import { generalStyles } from "@/styles/general-styles";
-import { TextInput, View } from "react-native";
+import { generalStyles } from "@/styles/GeneralStyles";
+import { InputProps } from "@/types/ThemeProps";
+import { TextInput } from "react-native";
 
-export function Input(props: TextInput) {
+export function Input(props: InputProps) {
   return (
-    <View style={generalStyles.container}>
-      <TextInput
-        style={generalStyles.input}
-        placeholder={props.props.placeholder}
-        onChangeText={props.props.onChangeText}
-        value={props.props.value}
-      />
-    </View>
+    <TextInput
+      style={generalStyles.input}
+      placeholder={props.placeholder}
+      onChangeText={props.onChangeText}
+      value={props.value}
+    />
   );
 }

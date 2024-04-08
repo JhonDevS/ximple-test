@@ -13,4 +13,4 @@ export type ThemeProps = {
 export type TextProps = ThemeProps & DefaultText["props"];
 export type InputProps = ThemeProps & DefaultTextInput["props"];
 export type ViewProps = ThemeProps & DefaultView["props"];
-export type ButtonProps = ThemeProps & DefaultButton["props"];
+export type ButtonProps = ThemeProps & DefaultButton["props"] & { children: React.ReactNode };

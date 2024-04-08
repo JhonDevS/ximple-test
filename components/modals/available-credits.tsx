@@ -1,4 +1,4 @@
-import { generalStyles } from "@/styles/general-styles";
+import { generalStyles } from "@/styles/GeneralStyles";
 import { Text } from "@/theme/components/Text";
 import { View } from "@/theme/components/View";
 
